@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LabCoat - Workspace Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+  <div class="header-row">
+    <div>
+      <h1>LabCoat</h1>
+      <p class="subtitle">Workspace-based Desktop Automation</p>
+      <div class="system-info" id="systemInfo"></div>
+    </div>
+    <div class="header-actions">
+      <button id="focusToggle" class="btn btn-secondary btn-sm" aria-pressed="false">
+        Focus Mode
+      </button>
+    </div>
+  </div>
+</header>
+
+      <!-- Main Content -->
+      <main class="main">
+        <div class="layout">
+          <!-- Left Sidebar: Workspaces -->
+          <aside class="sidebar sidebar-left">
+            <section class="panel">
+              <h2>Workspaces</h2>
+
+              <div class="new-item-form">
+                <input
+                  type="text"
+                  id="newWorkspaceName"
+                  placeholder="New workspace name..."
+                  class="input"
+                />
+                <button id="createWorkspaceBtn" class="btn btn-primary">
+                  Create
+                </button>
+              </div>
+
+              <div id="workspaceList" class="list">
+                <p class="empty-state">No workspaces yet</p>
+              </div>
+            </section>
+          </aside>
+
+          <!-- Center: Workspace Details -->
+          <section class="content">
+            <section class="panel">
+              <h2>Workspace Configuration</h2>
+              <div id="workspaceDetails" class="workspace-details">
+                <p class="empty-state">Select a workspace to configure</p>
+              </div>
+            </section>
+          </section>
+
+          <!-- Right Sidebar: Programs -->
+          <aside class="sidebar sidebar-right">
+            <section class="panel">
+              <h2>Programs</h2>
+
+              <div class="new-item-form">
+                <input
+                  type="text"
+                  id="newProgramName"
+                  placeholder="Program name..."
+                  class="input"
+                />
+                <input
+                  type="text"
+                  id="newProgramPath"
+                  placeholder="Executable path..."
+                  class="input"
+                />
+                <button id="createProgramBtn" class="btn btn-primary">
+                  Add
+                </button>
+                <button id="discoverProgramBtn" class="btn btn-secondary">
+                  Discover
+                </button>
+              </div>
+
+              <div id="programList" class="list">
+                <p class="empty-state">No programs yet</p>
+              </div>
+            </section>
+
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <!-- Program Discovery Modal -->
+    <div id="discoveryModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Discover Programs</h2>
+          <button class="modal-close" onclick="closeDiscoveryModal()">×</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="discovery-search">
+            <input
+              type="text"
+              id="discoverySearch"
+              placeholder="Search discovered programs..."
+              class="input"
+            />
+            <div class="discovery-info">
+              <span id="discoveryStatus">Discovering programs...</span>
+            </div>
+          </div>
+
+          <div id="discoveryList" class="discovery-list">
+            <p class="empty-state">Loading...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
+
+

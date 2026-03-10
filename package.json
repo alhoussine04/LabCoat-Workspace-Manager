@@ -1,0 +1,21 @@
+{
+  "name": "labcoat",
+  "version": "1.0.0",
+  "description": "Production-quality Electron desktop automation for workspace-based process control",
+  "main": "src/main.js",
+  "author": "Lab Coat Team",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
