@@ -65,6 +65,3 @@ LabCoat persists data in Electron's user data directory:
 ## Notes & Permissions
 - Hosts-file updates require elevated privileges.
 - DNS changes require elevated privileges and will update the system DNS while a workspace is active.
-
-## License
-MIT
