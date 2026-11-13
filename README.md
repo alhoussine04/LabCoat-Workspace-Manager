@@ -9,6 +9,10 @@ Workspace-based desktop automation for enforcing focused, repeatable app environ
 - Network controls: hosts-file blocklist and DNS category blocking via NextDNS.
 - Focus mode UI and per-workspace status summaries.
 
+## Screenshot
+
+![LabCoat running](docs/screenshot.png)
+
 ## Tech Stack
 - Electron (main + renderer)
 - Node.js 18+
